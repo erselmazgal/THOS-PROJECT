@@ -1,0 +1,17 @@
+﻿@model Thos_project.Models.Property
+
+<h2>Özellik Sil</h2>
+
+<div>
+    <h3>Bu özelliği silmek istediğinizden emin misiniz?</h3>
+    <p>Anahtar: @Model.Key</p>
+    <p>Değer: @Model.Value</p>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Sil" class="btn btn-danger" />
+    }
+</div>
+
+@Html.ActionLink("Geri Dön", "Index", null, new { @class = "btn btn-secondary" })

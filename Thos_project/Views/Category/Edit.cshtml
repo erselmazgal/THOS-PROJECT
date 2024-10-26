@@ -1,0 +1,17 @@
+﻿@model Thos_project.Models.Category
+
+<h2>Kategori Düzenle</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CategoryName)
+        @Html.TextBoxFor(model => model.CategoryName, new { @class = "form-control" })
+    </div>
+
+    <input type="submit" value="Kaydet" class="btn btn-primary" />
+}
+
+@Html.ActionLink("Geri Dön", "Index")

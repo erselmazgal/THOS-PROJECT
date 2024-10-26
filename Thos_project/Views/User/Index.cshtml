@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Thos_project.Models.User>
+
+<h2>Kullanıcı Listesi</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Kullanıcı Adı</th>
+            <th>Aksiyonlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Surname</td>
+                <td>@user.UserName</td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = user.UserId }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = user.UserId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("Yeni Kullanıcı Ekle", "Create", null, new { @class = "btn btn-primary" })

@@ -1,0 +1,11 @@
+﻿<h2>Dashboard</h2>
+<p>Kategori Sayısı: @ViewBag.CategoryCount</p>
+<p>Ürün Sayısı: @ViewBag.ProductCount</p>
+<p>Döviz Kuru (USD): @ViewBag.UsdRate</p>
+<p>Döviz Kuru (EURO): @ViewBag.EuroRate</p>
+<p>Döviz Kuru (GBP): @ViewBag.GBPRate</p>
+<script>
+    setInterval(function () {
+        location.reload();
+    }, 10000); // 10 saniyede bir sayfayı yeniler
+</script>
