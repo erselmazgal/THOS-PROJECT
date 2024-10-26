@@ -1,9 +1,6 @@
-
-Elbette! Aşağıda, projeniz için kullanabileceğiniz adım adım bir README dosyası örneği bulacaksınız. Bu örnek, SQL scriptini çalıştırmaktan Visual Studio'da uygulamayı başlatmaya kadar olan süreçleri açıklamaktadır.
-
 Proje Adı
 Proje Açıklaması
-Bu proje, bir müşteri yönetim sistemidir. Kullanıcıların müşteri girişi yaparak sisteme erişebilmesini ve admin kullanıcıların yönetim paneline giriş yaparak yönetim işlemlerini gerçekleştirmesini sağlar.
+Bu proje, bir müşteri ve admin yönetim sistemidir. Kullanıcıların müşteri girişi yaparak sisteme erişebilmesini ve admin kullanıcıların yönetim paneline giriş yaparak yönetim işlemlerini gerçekleştirmesini sağlar.
 
 Gereksinimler
 Microsoft SQL Server
