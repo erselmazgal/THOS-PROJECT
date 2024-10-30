@@ -1,0 +1,18 @@
+﻿@model Thos_project.Models.Product
+
+<h2>Ürün Sil</h2>
+
+<div>
+    <h3>Bu ürünü silmek istediğinizden emin misiniz?</h3>
+    <p>
+        @Model.ProductName
+    </p>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Sil" class="btn btn-danger" />
+    }
+</div>
+
+@Html.ActionLink("Geri Dön", "Index")

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Thos_project.Models.ProductProperty>
+
+<h2>Ürün Özellik Listesi</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Özellik Anahtarı</th>
+            <th>Aksiyonlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductId</td> <!-- Product adını göstermek için -->
+                <td>@item.ProductPropertyId</td> <!-- Property adını göstermek için -->
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.ProductPropertyId }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.ProductPropertyId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("Yeni Ürün Özelliği Ekle", "Create", null, new { @class = "btn btn-primary" })

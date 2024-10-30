@@ -1,0 +1,20 @@
+﻿@model Thos_project.Models.User
+
+<h2>Kullanıcı Sil</h2>
+
+<div>
+    <h3>Bu kullanıcıyı silmek istediğinizden emin misiniz?</h3>
+    <p>
+        Ad: @Model.Name<br />
+        Soyad: @Model.Surname<br />
+        Kullanıcı Adı: @Model.UserName
+    </p>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Sil" class="btn btn-danger" />
+    }
+</div>
+
+@Html.ActionLink("Geri Dön", "Index", null, new { @class = "btn btn-secondary" })

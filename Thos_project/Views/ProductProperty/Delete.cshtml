@@ -1,0 +1,19 @@
+﻿@model Thos_project.Models.ProductProperty
+
+<h2>Ürün Özelliğini Sil</h2>
+
+<div>
+    <h3>Bu ürün özelliğini silmek istediğinizden emin misiniz?</h3>
+    <p>
+        Ürün: @Model.ProductId<br />
+        Özellik: @Model.ProductPropertyId
+    </p>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Sil" class="btn btn-danger" />
+    }
+</div>
+
+@Html.ActionLink("Geri Dön", "Index", null, new { @class = "btn btn-secondary" })

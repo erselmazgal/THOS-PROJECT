@@ -1,0 +1,73 @@
+﻿@model Thos_project.Models.UserLoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş Yap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0; /* Margin sıfırlanır */
+            background-image: url('/UploadedImages/arkaplane.jpg'); /* Arka plan resmi */
+            background-size: cover; /* Resmi kapsayacak şekilde boyutlandır */
+            background-position: center; /* Resmi ortala */
+            background-repeat: no-repeat; /* Resmi tekrarlama */
+        }
+
+        .login-container {
+            border: 1px solid #ced4da; /* Kenar rengi */
+            border-radius: 0.5rem; /* Kenar yuvarlama */
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9); /* İçerik arka plan rengi (şeffaf beyaz) */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+            width: 400px; /* Genişliği sabitle */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2 class="text-center">Kullanıcı Girişi</h2>
+
+        @using (Html.BeginForm("UserLogin", "Login", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <!-- Hata mesajlarını göster -->
+            if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                </div>
+            }
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, "Kullanıcı Adı")
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Kullanıcı adınızı girin" })
+                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" }) <!-- Hata mesajı -->
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, "Şifre")
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Şifrenizi girin" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" }) <!-- Hata mesajı -->
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+        }
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

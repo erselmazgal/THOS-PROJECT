@@ -1,0 +1,18 @@
+﻿@model Thos_project.Models.Category
+
+<h2>Kategori Sil</h2>
+
+<div>
+    <h3>Bu kategoriyi silmek istediğinizden emin misiniz?</h3>
+    <p>
+        @Model.CategoryName
+    </p>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Sil" class="btn btn-danger" />
+    }
+</div>
+
+@Html.ActionLink("Geri Dön", "Index")
