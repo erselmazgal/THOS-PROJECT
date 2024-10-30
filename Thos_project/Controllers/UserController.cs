@@ -102,12 +102,19 @@ namespace Thos_project.Controllers
         }
         private string GenerateSalt()
         {
+<<<<<<< HEAD
             byte[] salt;
             new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
             return Convert.ToBase64String(salt);
         }
 
 
+=======
+            // Salt oluşturma metodu
+            return Convert.ToBase64String(new byte[16]);
+        }
+
+>>>>>>> 7174e52c49f9b83c9c3fbed47577088eea6d9c45
         private string HashPassword(string password, string salt)
         {
             // Şifre hashleme metodu

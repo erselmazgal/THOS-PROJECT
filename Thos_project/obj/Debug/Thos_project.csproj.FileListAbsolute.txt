@@ -164,6 +164,7 @@ C:\Users\ersel\Desktop\Thos_project\Thos_project\obj\Debug\Thos_project.csproj.C
 C:\Users\ersel\Desktop\Thos_project\Thos_project\obj\Debug\Thos_pro.037933BC.Up2Date
 C:\Users\ersel\Desktop\Thos_project\Thos_project\obj\Debug\Thos_project.dll
 C:\Users\ersel\Desktop\Thos_project\Thos_project\obj\Debug\Thos_project.pdb
+<<<<<<< HEAD
 C:\Users\ersel\Desktop\3\Thos_project\Thos_project\bin\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\ersel\Desktop\3\Thos_project\Thos_project\bin\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\ersel\Desktop\3\Thos_project\Thos_project\bin\Thos_project.dll.config
@@ -697,3 +698,5 @@ C:\Users\ersel\Desktop\2\Thos_project\Thos_project\obj\Debug\Thos_project.csproj
 C:\Users\ersel\Desktop\2\Thos_project\Thos_project\obj\Debug\Thos_pro.037933BC.Up2Date
 C:\Users\ersel\Desktop\2\Thos_project\Thos_project\obj\Debug\Thos_project.dll
 C:\Users\ersel\Desktop\2\Thos_project\Thos_project\obj\Debug\Thos_project.pdb
+=======
+>>>>>>> 7174e52c49f9b83c9c3fbed47577088eea6d9c45

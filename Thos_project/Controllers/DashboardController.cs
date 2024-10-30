@@ -34,7 +34,11 @@ namespace Thos_project.Controllers
         }
 
 
+<<<<<<< HEAD
         public ExchangeRates GetExchangeRate()
+=======
+        private ExchangeRates GetExchangeRate()
+>>>>>>> 7174e52c49f9b83c9c3fbed47577088eea6d9c45
         {
             using (var client = new WebClient())
             {
